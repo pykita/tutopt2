@@ -1,0 +1,62 @@
+﻿@model Tutopt.Models.Goods.GoodsItemViewModel
+@{
+    ViewBag.Title = "Редактировать";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Edit", "Goods"))
+{
+    @Html.HiddenFor(x => x.Id)
+    <div>
+        <label>Name</label>
+        @Html.EditorFor(x => x.Name)
+    </div>
+    <div>
+        <label>Model</label>
+        @Html.EditorFor(x => x.Model)
+    </div>
+    <div>
+        <label>Article</label>
+        @Html.EditorFor(x => x.Article)
+    </div>
+    <div>
+        <label>BriefDescription</label>
+        @Html.EditorFor(x => x.BriefDescription)
+    </div>
+    <div>
+        <label>FullDiscription</label>
+        @Html.EditorFor(x => x.FullDiscription)
+    </div>
+    <div>
+        <label>PurchasePrice</label>
+        @Html.EditorFor(x => x.PurchasePrice)
+    </div>
+    <div>
+        <label>MaxPrice</label>
+        @Html.EditorFor(x => x.MaxPrice)
+    </div>
+    <div>
+        <label>MiddlePrice</label>
+        @Html.EditorFor(x => x.MiddlePrice)
+    </div>
+    <div>
+        <label>MinPrice</label>
+        @Html.EditorFor(x => x.MinPrice)
+    </div>
+    <div>
+        <label>Count</label>
+        @Html.EditorFor(x => x.Count)
+    </div>
+    <div>
+        <label>IsWarranty</label>
+        @Html.CheckBoxFor(x => x.IsWarranty)
+    </div>
+    <div>
+        <label>Warranty</label>
+        @Html.EditorFor(x => x.Status)
+    </div>
+    <div>
+        <label>Status</label>
+        @Html.EditorFor(x => x.Status)
+    </div>
+    <input type="submit" value="Submit"/>
+}

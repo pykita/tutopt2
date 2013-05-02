@@ -1,0 +1,57 @@
+﻿@model Tutopt.Models.Goods.GoodsViewModel
+
+@{
+    ViewBag.Title = "Товары";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    $(function () {
+        $("#goods-table").dataTable();
+    })
+</script>
+<a href="@Url.Action("Create", "Goods")">Create</a>
+
+<table id="goods-table">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Model</td>
+            <td>Article</td>
+            <td>BriefDescription</td>
+            <td>FullDiscription</td>
+            <td>PurchasePrice</td>
+            <td>MaxPrice</td>
+            <td>MiddlePrice</td>
+            <td>MinPrice</td>
+            <td>Count</td>
+            <td>IsWarranty</td>
+            <td>Warranty</td>
+            <td>Status</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.GoodsItemsViewModel)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Model</td>
+                <td>@item.Article</td>
+                <td>@item.BriefDescription</td>
+                <td>@item.FullDiscription</td>
+                <td>@item.PurchasePrice</td>
+                <td>@item.MaxPrice</td>
+                <td>@item.MiddlePrice</td>
+                <td>@item.MinPrice</td>
+                <td>@item.Count</td>
+                <td>@item.IsWarranty</td>
+                <td>@item.Warranty</td>
+                <td>@item.Status</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Goods")/@item.Id">Edit</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

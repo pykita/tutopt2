@@ -1,0 +1,17 @@
+<<<<<<< HEAD
+D:\Git\tutopt\Tutopt.Test\bin\Debug\Tutopt.Test.dll
+D:\Git\tutopt\Tutopt.Test\bin\Debug\Tutopt.Test.pdb
+D:\Git\tutopt\Tutopt.Test\bin\Debug\nunit.framework.dll
+D:\Git\tutopt\Tutopt.Test\bin\Debug\nunit.mocks.dll
+D:\Git\tutopt\Tutopt.Test\bin\Debug\Rhino.Mocks.dll
+D:\Git\tutopt\Tutopt.Test\obj\Debug\Tutopt.Test.dll
+D:\Git\tutopt\Tutopt.Test\obj\Debug\Tutopt.Test.pdb
+=======
+C:\Users\Никита\Documents\GitHub\tutopt\Tutopt.Test\bin\Debug\Tutopt.Test.dll
+C:\Users\Никита\Documents\GitHub\tutopt\Tutopt.Test\bin\Debug\Tutopt.Test.pdb
+C:\Users\Никита\Documents\GitHub\tutopt\Tutopt.Test\bin\Debug\nunit.framework.dll
+C:\Users\Никита\Documents\GitHub\tutopt\Tutopt.Test\bin\Debug\nunit.mocks.dll
+C:\Users\Никита\Documents\GitHub\tutopt\Tutopt.Test\bin\Debug\Rhino.Mocks.dll
+C:\Users\Никита\Documents\GitHub\tutopt\Tutopt.Test\obj\Debug\Tutopt.Test.dll
+C:\Users\Никита\Documents\GitHub\tutopt\Tutopt.Test\obj\Debug\Tutopt.Test.pdb
+>>>>>>> Partial Orders

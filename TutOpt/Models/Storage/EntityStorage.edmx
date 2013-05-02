@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="uh252489_dbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="uh252489_dbModelStoreContainer">
+<<<<<<< HEAD
+          <EntitySet Name="Goods" EntityType="uh252489_dbModel.Store.Goods" store:Type="Tables" store:Schema="dbo" store:Name="Goods">
+            <DefiningQuery>SELECT 
+      [Goods].[Name] AS [Name], 
+      [Goods].[Id] AS [Id], 
+      [Goods].[Article] AS [Article], 
+      [Goods].[CategoryId] AS [CategoryId], 
+      [Goods].[ShortInformation] AS [ShortInformation], 
+      [Goods].[FullInformation] AS [FullInformation], 
+      [Goods].[PurchasePrice] AS [PurchasePrice], 
+      [Goods].[MaxPrice] AS [MaxPrice], 
+      [Goods].[MiddlePrice] AS [MiddlePrice], 
+      [Goods].[MinPrie] AS [MinPrie], 
+      [Goods].[Count] AS [Count], 
+      [Goods].[ImageId] AS [ImageId], 
+      [Goods].[IsWarranty] AS [IsWarranty], 
+      [Goods].[Warranty] AS [Warranty], 
+      [Goods].[StatusId] AS [StatusId]
+      FROM [dbo].[Goods] AS [Goods]</DefiningQuery>
+          </EntitySet>
+=======
+          <EntitySet Name="Goods" EntityType="uh252489_dbModel.Store.Goods" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Orders" EntityType="uh252489_dbModel.Store.Orders" store:Type="Tables" Schema="dbo" />
+>>>>>>> Partial Orders
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'uh252489_db.dbo.Goods' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Goods">
+          <Key>
+            
+            <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <PropertyRef Name="StatusId" />
+          </Key>
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Article" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="ShortInformation" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="FullInformation" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PurchasePrice" Type="money" Nullable="false" />
+          <Property Name="MaxPrice" Type="money" Nullable="false" />
+          <Property Name="MiddlePrice" Type="money" Nullable="false" />
+          <Property Name="MinPrie" Type="money" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="ImageId" Type="int" Nullable="false" />
+          <Property Name="IsWarranty" Type="bit" Nullable="false" />
+          <Property Name="Warranty" Type="smallint" Nullable="false" />
+          <Property Name="StatusId" Type="smallint" Nullable="false" />
+        </EntityType>
+<<<<<<< HEAD
+=======
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrderNumber1C" Type="bigint" />
+          <Property Name="CustomerName" Type="varchar" MaxLength="70" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="PhoneNumber" Type="char" MaxLength="12" />
+          <Property Name="Email" Type="varchar" MaxLength="30" />
+          <Property Name="OrderDate" Type="datetime" />
+          <Property Name="DeliveryDate" Type="datetime" />
+          <Property Name="DeliveryTypeId" Type="tinyint" Nullable="false" />
+          <Property Name="OrderStatusId" Type="tinyint" Nullable="false" />
+          <Property Name="PaymentTypeId" Type="smallint" Nullable="false" />
+          <Property Name="TransporterTypeId" Type="smallint" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+>>>>>>> Partial Orders
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="uh252489_dbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="EntityStorage" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Goods" EntityType="uh252489_dbModel.Goods" />
+          <EntitySet Name="Orders" EntityType="uh252489_dbModel.Orders" />
+        </EntityContainer>
+        <EntityType Name="Goods">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="StatusId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Article" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="ShortInformation" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="FullInformation" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="PurchasePrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="MaxPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="MiddlePrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="MinPrie" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <Property Name="ImageId" Type="Int32" Nullable="false" />
+          <Property Name="IsWarranty" Type="Boolean" Nullable="false" />
+          <Property Name="Warranty" Type="Int16" Nullable="false" />
+          <Property Type="Int16" Name="StatusId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="OrderNumber1C" />
+          <Property Type="String" Name="CustomerName" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UserId" />
+          <Property Type="String" Name="PhoneNumber" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="OrderDate" />
+          <Property Type="DateTime" Name="DeliveryDate" />
+          <Property Type="Byte" Name="DeliveryTypeId" Nullable="false" />
+          <Property Type="Byte" Name="OrderStatusId" Nullable="false" />
+          <Property Type="Int16" Name="PaymentTypeId" Nullable="false" />
+          <Property Type="Int16" Name="TransporterTypeId" Nullable="false" />
+          <Property Type="String" Name="Comment" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="uh252489_dbModelStoreContainer" CdmEntityContainer="EntityStorage">
+          <EntitySetMapping Name="Goods">
+            <EntityTypeMapping TypeName="uh252489_dbModel.Goods">
+              <MappingFragment StoreEntitySet="Goods">
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Article" ColumnName="Article" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="ShortInformation" ColumnName="ShortInformation" />
+                <ScalarProperty Name="FullInformation" ColumnName="FullInformation" />
+                <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+                <ScalarProperty Name="MaxPrice" ColumnName="MaxPrice" />
+                <ScalarProperty Name="MiddlePrice" ColumnName="MiddlePrice" />
+                <ScalarProperty Name="MinPrie" ColumnName="MinPrie" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="ImageId" ColumnName="ImageId" />
+                <ScalarProperty Name="IsWarranty" ColumnName="IsWarranty" />
+                <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="uh252489_dbModel.Orders">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="TransporterTypeId" ColumnName="TransporterTypeId" />
+                <ScalarProperty Name="PaymentTypeId" ColumnName="PaymentTypeId" />
+                <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+                <ScalarProperty Name="DeliveryTypeId" ColumnName="DeliveryTypeId" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="OrderNumber1C" ColumnName="OrderNumber1C" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="EntityStorage" ZoomLevel="92">
+        <EntityTypeShape EntityType="uh252489_dbModel.Goods" Width="1.5" PointX="0.75" PointY="0.75" Height="3.9033007812499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="uh252489_dbModel.Orders" Width="1.5" PointX="3.375" PointY="0.75" Height="3.5186979166666656" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
